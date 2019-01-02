@@ -1,0 +1,43 @@
+{
+	"autoprefixerBrowsers": [
+		"last 2 versions",
+		"> 5%"
+	],
+	"gzip_options": {
+		"threshold": "1kb",
+		"gzipOptions": {
+			"level": 9
+		}
+	},
+	"sourcePaths": {
+		"root": "wp-content/themes/anomys/src/",
+		"scss": "wp-content/themes/anomys/src/scss/**/*.scss",
+		"js": [
+			"wp-content/themes/anomys/src/js/*.js"
+		],
+		"php": [
+			"wp-content/themes/anomys/**/*.php"
+		],
+		"images": [
+			"src/images/**/*.{jpg,jpeg,png,gif}"
+		],
+		"svg": [
+			"wp-content/themes/anomys/src/images/*.svg"
+		]
+	},
+	"deployPaths": {
+		"root": "wp-content/themes/anomys/dist/",
+		"scss": "wp-content/themes/anomys/dist/css",
+		"js": "wp-content/themes/anomys/dist/js",
+		"images": "wp-content/themes/anomys/dist/images",
+		"svg": "wp-content/themes/anomys/dist/images"
+	},
+	"deployFiles": {
+		"scss": "app.css",
+		"js": "app.js"
+	},
+	"cleanFiles": [
+		"wp-content/themes/anomys/dist/css/"
+	],
+	"proxy": "anomys.loc"
+}
