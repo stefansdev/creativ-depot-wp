@@ -7,6 +7,10 @@ import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'autoprefixer';
 import imagemin from 'gulp-imagemin';
+import concat from 'gulp-concat';
+import uglify from 'gulp-uglify';
+import plumber from 'gulp-plumber';
+
 import del from 'del';
 import webpack from 'webpack-stream';
 import named from 'vinyl-named';
@@ -63,34 +67,13 @@ export const svg = () => {
     }))
     .pipe(dest(config.deployPaths.svg));
 }
-export const copy = () => {
-    return src([config.sourcePaths.root + '/**/*','!src/{images,js,scss}', config.sourcePaths.root + '!/{images,js,scss}/**/*'])
-    .pipe(dest(config.deployPaths.root));
-}
+
 export const scripts = () => {
     return src(config.sourcePaths.js)
-    .pipe(named())
-    .pipe(webpack({
-        module: {
-            rules: [
-                {
-                    test: /\.js$/,
-                    use: {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: []
-                        }
-                    }
-                }
-            ]
-        },
-        mode: PRODUCTION ? 'production' : 'development',
-        devtool: !PRODUCTION ? 'inline-source-map' : false,
-        output: {
-            filename: config.deployFiles.js
-        }
-    }))
-    .pipe(dest(config.deployPaths.js));
+        .pipe(uglify())
+        .pipe(plumber())
+        .pipe(concat(config.deployFiles.js))
+        .pipe(dest(config.deployPaths.js));
 }
 export const compress = () => {
     return src([
@@ -117,11 +100,10 @@ export const compress = () => {
 export const watchForChanges = () => {
     watch(config.sourcePaths.scss, styles);
     watch(config.sourcePaths.images, series(images, reload));
-    watch([config.sourcePaths.scss], series(copy, reload));
     watch(config.sourcePaths.js, series(scripts, reload));
     watch(config.sourcePaths.svg, svg);
     watch(config.sourcePaths.php, reload);
 }
-export const dev = series(clean, parallel(styles, images, svg, copy, scripts), serve, watchForChanges);
-export const build = series(clean, parallel(styles, images, svg, copy, scripts), compress);
+export const dev = series(clean, parallel(styles, images, svg, scripts), serve, watchForChanges);
+export const build = series(clean, parallel(styles, images, svg, scripts), compress);
 export default dev;

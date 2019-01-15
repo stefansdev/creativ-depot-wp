@@ -13,13 +13,15 @@
 		"root": "wp-content/themes/anomys/src/",
 		"scss": "wp-content/themes/anomys/src/scss/**/*.scss",
 		"js": [
+			"wp-content/themes/anomys/src/js/vendor/jquery-3.3.1.js",
+			"wp-content/themes/anomys/src/js/vendor/slick.js",
 			"wp-content/themes/anomys/src/js/*.js"
 		],
 		"php": [
 			"wp-content/themes/anomys/**/*.php"
 		],
 		"images": [
-			"src/images/**/*.{jpg,jpeg,png,gif}"
+			"wp-content/themes/anomys/src/images/**/*.{jpg,jpeg,png,gif}"
 		],
 		"svg": [
 			"wp-content/themes/anomys/src/images/*.svg"
@@ -30,7 +32,7 @@
 		"scss": "wp-content/themes/anomys/dist/css",
 		"js": "wp-content/themes/anomys/dist/js",
 		"images": "wp-content/themes/anomys/dist/images",
-		"svg": "wp-content/themes/anomys/dist/images"
+		"svg": "wp-content/themes/anomys/dist/images/svg"
 	},
 	"deployFiles": {
 		"scss": "app.css",
