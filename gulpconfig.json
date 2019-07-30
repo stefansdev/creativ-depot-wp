@@ -13,8 +13,10 @@
 		"root": "wp-content/themes/anomys/src/",
 		"scss": "wp-content/themes/anomys/src/scss/**/*.scss",
 		"js": [
-			"wp-content/themes/anomys/src/js/vendor/jquery-3.3.1.js",
-			"wp-content/themes/anomys/src/js/vendor/slick.js",
+			"wp-content/themes/anomys/src/js/vendor/jquery-3.4.1.js",
+			"wp-content/themes/anomys/src/js/vendor/magnific-popup.js",
+			"wp-content/themes/anomys/src/js/vendor/owl-carousel.js",
+			"wp-content/themes/anomys/src/js/vendor/wow.js",
 			"wp-content/themes/anomys/src/js/*.js"
 		],
 		"php": [

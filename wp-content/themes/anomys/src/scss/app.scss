@@ -1,5 +1,17 @@
-body {
-    background-color: red;
-}
+// reset
+@import "vendor/reset";
 
-@import 'main';
+// main stuff
+@import "fonts";
+@import "variables";
+@import "main";
+
+// vendors
+@import "vendor/animate";
+@import "vendor/owl.carousel";
+@import "vendor/owl.theme.default";
+
+// elements
+@import "elements/header";
+
+// pages
