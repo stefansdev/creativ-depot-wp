@@ -1,6 +1,6 @@
 <?php
 // db local
-define('DB_NAME', 'anomys');
+define('DB_NAME', 'creativ-depot');
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'localhost');
 define('DB_HOST', '127.0.0.1');
