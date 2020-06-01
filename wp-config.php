@@ -25,7 +25,7 @@ $table_prefix  = 'wp_';
 // debug mode
 define('WP_DEBUG', true);
 // enables uploading via wp-admin (for mac users with proper custom local setup)
-define('FS_METHOD', direct);
+define('FS_METHOD', 'direct');
 
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');

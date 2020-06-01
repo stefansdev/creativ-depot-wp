@@ -43,5 +43,5 @@
 	"cleanFiles": [
 		"wp-content/themes/anomys/dist/css/"
 	],
-	"proxy": "anomys.loc"
+	"proxy": "creativ-depot.loc"
 }
