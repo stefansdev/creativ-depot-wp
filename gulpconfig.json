@@ -9,8 +9,10 @@
 			"level": 9
 		}
 	},
+	"tailwindjs": "./tailwind.config.js",
 	"sourcePaths": {
 		"root": "wp-content/themes/anomys/src/",
+		"tailwind": "wp-content/themes/anomys/src/scss/tailwind.css",
 		"scss": "wp-content/themes/anomys/src/scss/**/*.scss",
 		"js": [
 			"wp-content/themes/anomys/src/js/vendor/jquery-3.4.1.js",

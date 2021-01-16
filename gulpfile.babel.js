@@ -37,11 +37,16 @@ export const reload = done => {
 export const clean = () => del(config.cleanFiles);
 
 export const styles = () => {
+	const tailwindcss = require('tailwindcss'); 
+	
     return src(config.sourcePaths.scss)
     .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulpif(PRODUCTION, postcss([ autoprefixer ])))
-    .pipe(gulpif(PRODUCTION, cleanCss({compatibility:'ie8'})))
+	.pipe(postcss([
+		require('tailwindcss'),
+		require('autoprefixer')
+	]))
+	.pipe(gulpif(PRODUCTION, cleanCss({compatibility:'ie8'})))
     .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
     .pipe(dest(config.deployPaths.scss))
     .pipe(server.stream());

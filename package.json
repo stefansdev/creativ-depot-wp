@@ -1,48 +1,50 @@
 {
-    "name": "anomys",
-    "version": "1.0.0",
-    "description": "<!DOCTYPE html> <html> <head> \t<meta name=\"viewport\" content=\"width=device-width\" /> \t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /> \t<title>WordPress &#8250; ReadMe</title> \t<link rel=\"stylesheet\" href=\"wp-admin/css/install.css?ver=20100228\" type=\"text/css\" /> </head> <body> <h1 id=\"logo\"> \t<a href=\"https://wordpress.org/\"><img alt=\"WordPress\" src=\"wp-admin/images/wordpress-logo.png\" /></a> </h1> <p style=\"text-align: center\">Semantic Personal Publishing Platform</p>",
-    "main": "index.php",
-    "scripts": {
-        "start": "gulp",
-        "build": "gulp build --prod"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://St3f4NS@bitbucket.org/anomyscom/anomys.git"
-    },
-    "author": "anomys",
-    "license": "ISC",
-    "homepage": "https://bitbucket.org/anomyscom/anomys#readme",
-    "dependencies": {
-        "gulp-concat": "^2.6.1",
-        "gulp-plumber": "^1.2.1"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.10.2",
-        "@babel/preset-env": "^7.10.2",
-        "@babel/register": "^7.10.1",
-        "autoprefixer": "^9.8.0",
-        "babel-loader": "^8.1.0",
-        "browser-sync": "^2.26.7",
-        "cheerio": "^1.0.0-rc.2",
-        "del": "^5.1.0",
-        "gulp": "^4.0.2",
-        "gulp-cheerio": "^1.0.0",
-        "gulp-clean-css": "^4.3.0",
-        "gulp-if": "^3.0.0",
-        "gulp-imagemin": "^7.1.0",
-        "gulp-postcss": "^8.0.0",
-        "gulp-replace": "^1.0.0",
-        "gulp-sass": "^4.1.0",
-        "gulp-sourcemaps": "^2.6.5",
-        "gulp-svgstore": "^7.0.1",
-        "gulp-uglify": "^3.0.2",
-        "gulp-zip": "^5.0.1",
-        "jquery": "^3.5.1",
-        "svgstore": "^3.0.0-2",
-        "vinyl-named": "^1.1.0",
-        "webpack-stream": "^5.2.1",
-        "yargs": "^15.3.1"
-    }
+	"name": "anomys",
+	"version": "1.0.0",
+	"description": "<!DOCTYPE html> <html> <head> \t<meta name=\"viewport\" content=\"width=device-width\" /> \t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /> \t<title>WordPress &#8250; ReadMe</title> \t<link rel=\"stylesheet\" href=\"wp-admin/css/install.css?ver=20100228\" type=\"text/css\" /> </head> <body> <h1 id=\"logo\"> \t<a href=\"https://wordpress.org/\"><img alt=\"WordPress\" src=\"wp-admin/images/wordpress-logo.png\" /></a> </h1> <p style=\"text-align: center\">Semantic Personal Publishing Platform</p>",
+	"main": "index.php",
+	"scripts": {
+		"start": "gulp",
+		"build": "gulp build --prod"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://St3f4NS@bitbucket.org/anomyscom/anomys.git"
+	},
+	"author": "anomys",
+	"license": "ISC",
+	"homepage": "https://bitbucket.org/anomyscom/anomys#readme",
+	"dependencies": {
+		"gulp-concat": "^2.6.1",
+		"gulp-plumber": "^1.2.1",
+		"postcss": "^8.2.4",
+		"tailwindcss": "^2.0.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.12.10",
+		"@babel/preset-env": "^7.12.11",
+		"@babel/register": "^7.12.10",
+		"autoprefixer": "^10.2.1",
+		"babel-loader": "^8.2.2",
+		"browser-sync": "^2.26.13",
+		"cheerio": "1.0.0-rc.5",
+		"del": "^6.0.0",
+		"gulp": "^4.0.2",
+		"gulp-cheerio": "^1.0.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-if": "^3.0.0",
+		"gulp-imagemin": "^7.1.0",
+		"gulp-postcss": "^9.0.0",
+		"gulp-replace": "^1.0.0",
+		"gulp-sass": "^4.1.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-svgstore": "^7.0.1",
+		"gulp-uglify": "^3.0.2",
+		"gulp-zip": "^5.0.2",
+		"jquery": "^3.5.1",
+		"svgstore": "^3.0.0-2",
+		"vinyl-named": "^1.1.0",
+		"webpack-stream": "^6.1.1",
+		"yargs": "^16.2.0"
+	}
 }
