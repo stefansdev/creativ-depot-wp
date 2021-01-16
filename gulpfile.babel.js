@@ -6,10 +6,11 @@ import gulpif from 'gulp-if';
 import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'autoprefixer';
-import imagemin from 'gulp-imagemin';
+import image from 'gulp-image';
 import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
 import plumber from 'gulp-plumber';
+import notify from "gulp-notify";
 
 import del from 'del';
 import webpack from 'webpack-stream';
@@ -40,22 +41,25 @@ export const styles = () => {
 	const tailwindcss = require('tailwindcss'); 
 	
     return src(config.sourcePaths.scss)
-    .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
-    .pipe(sass().on('error', sass.logError))
+	.pipe(gulpif(!PRODUCTION, sourcemaps.init()))
+	.pipe(sass()).on('error', sass.logError)
 	.pipe(postcss([
 		require('tailwindcss'),
 		require('autoprefixer')
 	]))
 	.pipe(gulpif(PRODUCTION, cleanCss({compatibility:'ie8'})))
     .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
-    .pipe(dest(config.deployPaths.scss))
-    .pipe(server.stream());
+	.pipe(dest(config.deployPaths.scss))
+	.pipe(server.stream());
+	
 }
 export const images = () => {
     return src(config.sourcePaths.images)
-    .pipe(gulpif(PRODUCTION, imagemin()))
+	.pipe(image())
     .pipe(dest(config.deployPaths.images));
 }
+
+
 
 export const svg = () => {
     return src(config.sourcePaths.svg)
