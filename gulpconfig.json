@@ -12,8 +12,8 @@
 	"tailwindjs": "./tailwind.config.js",
 	"sourcePaths": {
 		"root": "wp-content/themes/anomys/src/",
-		"tailwind": "wp-content/themes/anomys/src/scss/tailwind.css",
-		"scss": "wp-content/themes/anomys/src/scss/**/*.scss",
+		"tailwind": "wp-content/themes/anomys/src/style/app.css",
+		"scss": "wp-content/themes/anomys/src/style/**/*.scss",
 		"js": [
 			"wp-content/themes/anomys/src/js/vendor/jquery-3.6.0.js",
 			"wp-content/themes/anomys/src/js/vendor/magnific-popup.js",
@@ -45,6 +45,9 @@
 	"cleanFiles": [
 		"wp-content/themes/anomys/dist/css/",
 		"wp-content/themes/anomys/dist/images/"
+	],
+	"cleanCSS": [
+		"wp-content/themes/anomys/dist/css/"
 	],
 	"proxy": "creativ-depot.loc"
 }

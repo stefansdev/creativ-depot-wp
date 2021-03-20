@@ -16,7 +16,10 @@
 	"homepage": "https://bitbucket.org/anomyscom/anomys#readme",
 	"dependencies": {
 		"gulp-concat": "^2.6.1",
-		"gulp-plumber": "^1.2.1"
+		"gulp-plumber": "^1.2.1",
+		"node-sass": "^4.14.1",
+		"postcss-import": "^14.0.0",
+		"postcss-scss": "^3.0.5"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.12.10",
