@@ -39,10 +39,10 @@ export const styles = () => {
 	return src(config.sourcePaths.scss)
 		.pipe(gulpif(!PRODUCTION, sourcemaps.init()))
 		.pipe(sass()).on('error', sass.logError)
-		.pipe(gulpif(PRODUCTION, postcss([
-			require('tailwindcss'),
+		.pipe(postcss([
+			require('@tailwindcss/jit'),
 			require('autoprefixer')
-		])))
+		]))
 		.pipe(gulpif(PRODUCTION, cleanCss({ compatibility: 'ie8' })))
 		.pipe(gulpif(!PRODUCTION, sourcemaps.write()))
 		.pipe(dest(config.deployPaths.scss))
