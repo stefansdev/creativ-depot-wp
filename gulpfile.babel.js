@@ -19,6 +19,7 @@ import replace from "gulp-replace";
 import tailwindcss from "@tailwindcss/jit";
 import autoprefixer from 'autoprefixer';
 import postScss from 'postcss-scss'
+import postCssPreset from 'postcss-preset-env';
 import config from "./gulpconfig.json";
 
 const PRODUCTION = yargs.argv.prod;
@@ -38,6 +39,7 @@ export const cleanDevCss = () => del(config.cleanCSS);
 
 export const styles = () => {
 	var plugins = [
+		postCssPreset(),
 		tailwindcss(config.tailwindjs),
 		autoprefixer(),
 	];

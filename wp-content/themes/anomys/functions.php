@@ -29,3 +29,18 @@ require get_template_directory() . '/inc/option_page.php';
 
 // include custom post types
 require get_template_directory() . '/inc/custom_post_types.php';
+
+
+
+// acf save to local json
+function acf_json_save_point($path)
+{
+	// update path
+	$path = get_template_directory() . '/inc/acf_fields';
+	// return
+	return $path;
+}
+add_filter('acf/settings/save_json', 'acf_json_save_point');
+
+// remove p from cf7
+add_filter('wpcf7_autop_or_not', '__return_false');
