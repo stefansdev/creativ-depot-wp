@@ -17,7 +17,7 @@
 		"js": [
 			"wp-content/themes/anomys/src/js/vendor/jquery-3.6.0.js",
 			"wp-content/themes/anomys/src/js/vendor/magnific-popup.js",
-			"wp-content/themes/anomys/src/js/vendor/owl-carousel.js",
+			"wp-content/themes/anomys/src/js/vendor/slick.js",
 			"wp-content/themes/anomys/src/js/vendor/wow.js",
 			"wp-content/themes/anomys/src/js/*.js"
 		],
