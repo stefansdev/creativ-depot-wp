@@ -12,7 +12,7 @@
 <body <?php body_class(); ?>>
 
 
-	<header class="bg-blue-500 flex justify-center ">
+	<header class="bg-red-500 flex justify-center">
 		<nav>
 			<?php
 			$args_menu = array(

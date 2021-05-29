@@ -15,6 +15,7 @@
 	"license": "ISC",
 	"homepage": "https://bitbucket.org/anomyscom/anomys#readme",
 	"dependencies": {
+		"gulp-autoprefixer": "^8.0.0",
 		"gulp-change": "^1.0.2",
 		"gulp-concat": "^2.6.1",
 		"gulp-plumber": "^1.2.1",

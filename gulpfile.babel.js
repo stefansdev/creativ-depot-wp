@@ -4,22 +4,18 @@ import sass from 'gulp-sass';
 import cleanCss from 'gulp-clean-css';
 import gulpif from 'gulp-if';
 import postcss from 'gulp-postcss';
-import postcssImport from 'postcss-import';
 import sourcemaps from 'gulp-sourcemaps';
 import image from 'gulp-image';
 import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
 import plumber from 'gulp-plumber';
-
 import del from 'del';
 import browserSync from "browser-sync";
 import svgstore from 'gulp-svgstore';
 import cheerio from 'gulp-cheerio';
-import replace from "gulp-replace";
-import tailwindcss from "@tailwindcss/jit";
+import tailwindcss from "tailwindcss";
 import autoprefixer from 'autoprefixer';
 import postScss from 'postcss-scss'
-import postCssPreset from 'postcss-preset-env';
 import config from "./gulpconfig.json";
 
 const PRODUCTION = yargs.argv.prod;
@@ -39,11 +35,10 @@ export const cleanDevCss = () => del(config.cleanCSS);
 
 export const styles = () => {
 	var plugins = [
-		postCssPreset(),
 		tailwindcss(config.tailwindjs),
-		autoprefixer(),
+		autoprefixer()
 	];
-	return src(config.sourcePaths.scss)
+	return src(config.sourcePaths.scss, config.sourcePaths.tailwind)
 		.pipe(gulpif(!PRODUCTION, sourcemaps.init()))
 		.pipe(sass()).on('error', sass.logError)
 		.pipe(postcss(plugins, { parser: postScss }))
@@ -90,6 +85,7 @@ export const scripts = () => {
 export const watchForChanges = () => {
 	watch(config.sourcePaths.scss, series(styles));
 	watch(config.sourcePaths.tailwind, series(styles));
+	watch(config.tailwindjs, series(styles));
 	watch(config.sourcePaths.images, series(images, reload));
 	watch(config.sourcePaths.js, series(scripts, reload));
 	watch(config.sourcePaths.svg, svg);
