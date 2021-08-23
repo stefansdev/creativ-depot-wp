@@ -1,17 +1,17 @@
-@import "tailwind";
-@import "app.css";
+@use "tailwind";
+@use "app.css";
 
 // main stuff
-@import "fonts";
-@import "variables";
-@import "main";
+@use "fonts";
+@use "variables";
+@use "main";
 
 // vendors
-@import "vendor/animate";
-@import "vendor/slick";
-@import "vendor/slick-theme";
+@use "vendor/animate";
+@use "vendor/slick";
+@use "vendor/slick-theme";
 
 // elements
-@import "elements/header";
+@use "elements/header";
 
 // pages

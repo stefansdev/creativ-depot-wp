@@ -52,5 +52,5 @@
 	"cleanCSS": [
 		"wp-content/themes/anomys/dist/css/"
 	],
-	"proxy": "creativ-depot.loc"
+	"proxy": "creativdepot-wp.loc"
 }
