@@ -9,11 +9,11 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/St3f4NS/creativdepot"
+        "url": "https://github.com/stefansdev/creativ-depot-wp/"
     },
     "author": "stefansdev",
     "license": "ISC",
-    "homepage": "https://github.com/St3f4NS/creativdepot",
+    "homepage": "https://github.com/stefansdev/creativ-depot-wp/",
     "dependencies": {
         "gulp-autoprefixer": "^8.0.0",
         "gulp-change": "^1.0.2",
