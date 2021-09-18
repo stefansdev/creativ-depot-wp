@@ -56,6 +56,11 @@ export const images = () => {
 		.pipe(dest(config.deployPaths.images));
 }
 
+export const imagesDev = () => {
+	return src(config.sourcePaths.images)
+		.pipe(dest(config.deployPaths.images));
+}
+
 
 
 export const svg = () => {
@@ -86,11 +91,11 @@ export const watchForChanges = () => {
 	watch(config.sourcePaths.scss, series(styles));
 	watch(config.sourcePaths.tailwind, series(styles));
 	watch(config.tailwindjs, series(styles));
-	watch(config.sourcePaths.images, series(images, reload));
+	watch(config.sourcePaths.images, series(imagesDev, reload));
 	watch(config.sourcePaths.js, series(scripts, reload));
 	watch(config.sourcePaths.svg, svg);
 	watch(config.sourcePaths.php, series(styles, reload));
 }
-export const dev = series(clean, parallel(styles, images, svg, scripts), serve, watchForChanges);
+export const dev = series(clean, parallel(styles, imagesDev, svg, scripts), serve, watchForChanges);
 export const build = series(clean, parallel(styles, images, svg, scripts));
 export default dev;
