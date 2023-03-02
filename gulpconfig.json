@@ -1,56 +1,56 @@
 {
-	"autoprefixerBrowsers": [
-		"last 2 versions",
-		"> 5%"
-	],
-	"gzip_options": {
-		"threshold": "1kb",
-		"gzipOptions": {
-			"level": 9
-		}
-	},
-	"tailwindjs": "./tailwind.config.js",
-	"sourcePaths": {
-		"root": "wp-content/themes/anomys/src/",
-		"tailwind": "wp-content/themes/anomys/src/style/app.css",
-		"scss": "wp-content/themes/anomys/src/style/**/*.scss",
-		"js": [
-			"wp-content/themes/anomys/src/js/vendor/jquery-3.6.0.js",
-			"wp-content/themes/anomys/src/js/vendor/magnific-popup.js",
-			"wp-content/themes/anomys/src/js/vendor/slick.js",
-			"wp-content/themes/anomys/src/js/vendor/wow.js",
-			"wp-content/themes/anomys/src/js/*.js"
-		],
-		"php": [
-			"wp-content/themes/anomys/**/*.php"
-		],
-		"images": [
-			"wp-content/themes/anomys/src/images/**/*.{jpg,jpeg,png,gif}"
-		],
-		"svg": [
-			"wp-content/themes/anomys/src/images/*.svg"
-		]
-	},
-	"watchFiles": {
-		"style": "wp-content/themes/anomys/src/style/*.css"
-	},
-	"deployPaths": {
-		"root": "wp-content/themes/anomys/dist/",
-		"scss": "wp-content/themes/anomys/dist/css",
-		"js": "wp-content/themes/anomys/dist/js",
-		"images": "wp-content/themes/anomys/dist/images",
-		"svg": "wp-content/themes/anomys/dist/images/svg"
-	},
-	"deployFiles": {
-		"scss": "app.css",
-		"js": "app.js"
-	},
-	"cleanFiles": [
-		"wp-content/themes/anomys/dist/css/",
-		"wp-content/themes/anomys/dist/images/"
-	],
-	"cleanCSS": [
-		"wp-content/themes/anomys/dist/css/"
-	],
-	"proxy": "creativdepot-wp.loc"
+    "autoprefixerBrowsers": [
+        "last 2 versions",
+        "> 5%"
+    ],
+    "gzip_options": {
+        "threshold": "1kb",
+        "gzipOptions": {
+            "level": 9
+        }
+    },
+    "tailwindjs": "./tailwind.config.js",
+    "sourcePaths": {
+        "root": "wp-content/themes/anomys/src/",
+        "tailwind": "wp-content/themes/anomys/src/style/app.css",
+        "scss": "wp-content/themes/anomys/src/style/**/*.scss",
+        "js": [
+            "wp-content/themes/anomys/src/js/vendor/jquery-3.6.0.js",
+            "wp-content/themes/anomys/src/js/vendor/magnific-popup.js",
+            "wp-content/themes/anomys/src/js/vendor/slick.js",
+            "wp-content/themes/anomys/src/js/vendor/wow.js",
+            "wp-content/themes/anomys/src/js/*.js"
+        ],
+        "php": [
+            "wp-content/themes/anomys/**/*.php"
+        ],
+        "images": [
+            "wp-content/themes/anomys/src/images/**/*.{jpg,jpeg,png,gif}"
+        ],
+        "svg": [
+            "wp-content/themes/anomys/src/images/*.svg"
+        ]
+    },
+    "watchFiles": {
+        "style": "wp-content/themes/anomys/src/style/*.css"
+    },
+    "deployPaths": {
+        "root": "wp-content/themes/anomys/dist/",
+        "scss": "wp-content/themes/anomys/dist/css",
+        "js": "wp-content/themes/anomys/dist/js",
+        "images": "wp-content/themes/anomys/dist/images",
+        "svg": "wp-content/themes/anomys/dist/images/svg"
+    },
+    "deployFiles": {
+        "scss": "app.css",
+        "js": "app.js"
+    },
+    "cleanFiles": [
+        "wp-content/themes/anomys/dist/css/",
+        "wp-content/themes/anomys/dist/images/"
+    ],
+    "cleanCSS": [
+        "wp-content/themes/anomys/dist/css/"
+    ],
+    "proxy": "creativdepotwp.loc"
 }

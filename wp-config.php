@@ -1,6 +1,6 @@
 <?php
 // db local
-define('DB_NAME', 'creativ-depot');
+define('DB_NAME', 'creativdepotwp');
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'localhost');
 define('DB_HOST', '127.0.0.1');
@@ -27,9 +27,7 @@ define('WP_DEBUG', true);
 // enables uploading via wp-admin (for mac users with proper custom local setup)
 define('FS_METHOD', 'direct');
 
-if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+if (!defined('ABSPATH'))
+    define('ABSPATH', dirname(__FILE__) . '/');
 
 require_once(ABSPATH . 'wp-settings.php');
-
- ?>
